@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        XG Dashboard Classement L1
+    </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+
+<html>
+
+<body>
+    <h1 style="text-align: center;">
+        Classement Page
+    </h1>
+
+    <table class="center" border="3" width="96%">
+        <colgroup>
+            <col span="16" width="6%">
+        </colgroup>
+
+        <tr>
+            <th>Position</th>
+            <th>Équipes</th>
+            <th>Matchs Joués</th>
+            <th>Matchs Gagnés</th>
+            <th>Matchs Nuls</th>
+            <th>Matchs Perdus</th>
+            <th>Buts Pour</th>
+            <th>Buts Contre</th>
+            <th>Points</th>
+            <th>XG</th>
+            <th>XG - Buts Pour</th>
+            <th>XGA</th>
+            <th>XGA - Buts Contre</th>
+            <th>XPTS</th>
+            <th>XPTS - Points Pris</th>
+            <th>Indice XG de réussite</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{ i['Pos'] }}</td>
+            <td>{{ i['Team'] }}</td>
+            <td>{{ i['M'] }}</td>
+            <td>{{ i['W'] }}</td>
+            <td>{{ i['D'] }}</td>
+            <td>{{ i['L'] }}</td>
+            <td>{{ i['G'] }}</td>
+            <td>{{ i['GA'] }}</td>
+            <td>{{ i['PTS'] }}</td>
+            <td>{{ i['xG'] }}</td>
+            <td>{{ i['xG-G'] }}</td>
+            <td>{{ i['xGA'] }}</td>
+            <td>{{ i['xGA-GA'] }}</td>
+            <td>{{ i['xPTS'] }}</td>
+            <td>{{ i['xPTS-PTS'] }}</td>
+            <td>{{ i['reussit_index'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2 style="text-align: center;">
+        Les "Expected points"
+    </h2>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#5900ff; padding: 1em;">
+        Les "Expected Points" ou "xPTS", sont également une statistique prise en compte. En fonction des "Expected
+        Goals"
+        cumulées par les deux équipes au cours d'un match, on leur attribue un nombre de points que celles-ci auraient
+        du prendre si elles avaient marqué les buts déterminées par les "xG"
+    </p>
+
+    <h2 style="text-align: center;">
+        Indice de réussite XG
+    </h2>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#ffc400; padding: 1em;">
+        "L'indice de réussite xG" est un indice de réussite, calculé à partir d'une combinaison linéaire des trois
+        statistiques : "Expected Goals - Goals", "Expected Goals Against - Goals Against" and "Expected Points - Points
+        Pris", chacun étant pondéré par le nombre de match joué par chaque équipe . Cette statistique est ainsi un
+        indicateur de réussite, un indice élevé signifie une grande réussite général et donc potentiellement une équipe
+        plus susceptible de gagner un match, un indice moins élevé signifie une réussite générale moins importante.
+    </p>
+
+
+    <h2 style="text-align: center;">
+        Menu d'accès aux autres pages
+    </h2>
+
+    <h3 style="text-align: center;">
+        Calendrier et meilleur cote
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=calendrier> Accéder au Calendrier et Meilleures cotes en cliquant ici. </a>
+            </li>
+        </u1>
+    </p>
+
+    <h3 style="text-align: center;">
+        Graphique de comparaison
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=graph> Accéder au Graphique de Comparaison en cliquant ici </a>
+            </li>
+        </u1>
+    </p>
+
+</body>
+
+</html>

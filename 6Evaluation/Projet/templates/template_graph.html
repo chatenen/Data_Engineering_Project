@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        XG Dashboard Graph L1
+    </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 style="text-align: center">
+        Graphique Page
+    </h1>
+
+    <h3 style="text-align: center;">
+        Comparaison XG-XGA pour chaque équipes
+    </h3>
+
+    <table class="center" border="0">
+        <tr>
+            <td>
+                <img border="1" src="/static/images_plot/plot1.png" />
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#ff4800; padding: 1em;">
+        Ce graphique montre principalement la réussite des équipes par match, avec les buts qu'elles sont censés marquer
+        ou encaisser. Si une équipe se situe à gauche du bar graphe, elle est censé mettre beaucoup plus de buts qu'elle
+        n'en encaisse et donc avoir une moyenne de 'XG/match' plus importante. Au contraire, les équipes à droite se
+        situe dans le bas du classement doivent avoir une moyenne de 'XGA/match' plus importante.
+    </p>
+
+
+    <h3 style="text-align: center;">
+        Indice de performance sur la réussite des buts marqués pour chaque équipes
+    </h3>
+
+    <table class="center" border="0">
+        <tr>
+            <td>
+                <img border="1" src="/static/images_plot/plot2.png" />
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#00ff2a; padding: 1em;">
+        Ce graphique montre la réussite des buts marqués par match. Plus son indice est haut, plus elle est efficace
+        devant le but et à de chances marqués et donc potentiellement gagné un match.
+    </p>
+
+    <h3 style="text-align: center;">
+        Indice de performance sur la réussite des buts encaissés pour chaque équipes
+    </h3>
+
+    <table class="center" border="0">
+        <tr>
+            <td>
+                <img border="1" src="/static/images_plot/plot3.png" />
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#1100ff; padding: 1em;">
+        Ce graphique montre la réussite des buts encaissés par match. Plus son indice est haut, plus sa défense est
+        efficace, ainsi elle concède peu de buts et donc potentiellement gagné un match.
+    </p>
+
+    <h3 style="text-align: center;">
+        Indice de performance sur la réussite des points pris pour chaque équipes
+    </h3>
+
+    <table class="center" border="0">
+        <tr>
+            <td>
+                <img border="1" src="/static/images_plot/plot4.png" />
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align:justify ;border:3px; border-style:solid; border-color:#ff00dd; padding: 1em;">
+        Ce graphique montre la réussite sur les points pris par match. Plus son indice est haut, plus l'équipe en
+        général
+        est efficace et à de chance potentiel de gagner un match.
+    </p>
+
+    <h2 style="text-align: center;">
+        Menu d'accès aux autres pages
+    </h2>
+
+    <h3 style="text-align: center;">
+        Calendrier et meilleur cote
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=graph> Accéder au Calendrier et Meilleures cotes en cliquant ici. </a>
+            </li>
+        </u1>
+    </p>
+
+
+    <h3 style="text-align: center;">
+        Accès au Classement
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=classement> Accéder au Classement actuel en cliquant ici </a>
+            </li>
+        </u1>
+    </p>
+
+</body>
+
+</html>

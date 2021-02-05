@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        XG Dashboard Calendrier L1
+    </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+    <h1 style="text-align: center;">
+        Calendrier and cote Page
+    </h1>
+
+    <table class="center" border="3" width="96%">
+        <colgroup>
+            <col span="8" width="12%">
+        </colgroup>
+
+        <tr>
+            <th>Date</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Cote Home Team Win</th>
+            <th>Draw</th>
+            <th>Cote Away Team Win</th>
+        </tr>
+        {% for i in data2 %}
+
+        <tr>
+            <td>{{ i['Date'] }}</td>
+            <td>{{ i['Home Team'] }}</td>
+            <td>{{ i['Away Team'] }}</td>
+            <td>{{ i['Home Team Win'] }}</td>
+            <td>{{ i['Draw'] }}</td>
+            <td>{{ i['Away Team Win'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2 style="text-align: center;">
+        Menu d'accès aux autres pages
+    </h2>
+
+    <h3 style="text-align: center;">
+        Graphique de comparaison
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=graph> Accéder au Graphique de Comparaison en cliquant ici </a>
+            </li>
+        </u1>
+    </p>
+
+    <h3 style="text-align: center;">
+        Accès au Classement
+    </h3>
+
+    <p>
+        <u1>
+            <li>
+                <a href=classement> Accéder au Classement actuel en cliquant ici </a>
+            </li>
+        </u1>
+    </p>
+
+</body>
+
+</html>
